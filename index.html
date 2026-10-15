@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Churrasquería PIO: deliciosos platos de churrasco preparados al momento. Revisa el menú y haz tu pedido por WhatsApp.">
+  <title>Churrasquería PIO | Sabor a la parrilla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Churrasquería PIO, inicio">
+      <span class="brand-mark">PIO</span>
+      <span class="brand-copy"><strong>CHURRASQUERÍA</strong><small>SABOR A LA PARRILLA</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Platos</a>
+      <a href="#direccion">Dirección</a>
+      <a href="#contacto">Contacto</a>
+      <button class="cart-nav" id="openCart" type="button">🛒 Mi pedido <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <span class="eyebrow">🔥 HECHO A LA PARRILLA</span>
+        <h1>El sabor del<br><em>verdadero churrasco.</em></h1>
+        <p>Carne jugosa, acompañamientos deliciosos y ese sabor a parrilla que siempre provoca volver.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#productos">Ver nuestros platos</a>
+          <a class="btn btn-outline" href="#nosotros">Conócenos</a>
+        </div>
+        <div class="hero-note"><span class="flame">✦</span> Buen sabor · Buen ambiente · Buena atención</div>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Lo que nos caracteriza">
+      <article><span>🥩</span><div><strong>Sabor a la parrilla</strong><small>Preparado al momento</small></div></article>
+      <article><span>🍟</span><div><strong>Buenos acompañamientos</strong><small>Para disfrutar cada bocado</small></div></article>
+      <article><span>📲</span><div><strong>Pedido sencillo</strong><small>Ordena por WhatsApp</small></div></article>
+    </section>
+
+    <section class="section about" id="nosotros">
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85" alt="Carne a la parrilla preparada para servir" loading="lazy">
+        <div class="photo-label"><strong>PIO</strong><span>Pasión por el buen sabor</span></div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">BIENVENIDOS A PIO</span>
+        <h2>Más que un plato,<br><em>una buena experiencia.</em></h2>
+        <p>En Churrasquería PIO queremos compartir contigo el gusto por un buen churrasco. Preparamos nuestros platos pensando en el sabor, la calidad y una atención cercana para que disfrutes cada visita.</p>
+        <p>Explora nuestro menú, elige tus favoritos y envíanos tu pedido directamente por WhatsApp.</p>
+        <a class="text-link" href="#productos">Descubrir el menú <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="productos">
+      <div class="section-heading">
+        <span class="eyebrow">NUESTRO MENÚ</span>
+        <h2>Platos que <em>provocan.</em></h2>
+        <p>Elige tu favorito y agrégalo al carrito. Los precios son de ejemplo y puedes modificarlos en el archivo JavaScript.</p>
+      </div>
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter active" data-category="todos">Todos</button>
+        <button class="filter" data-category="churrasco">Churrascos</button>
+        <button class="filter" data-category="especial">Especiales</button>
+        <button class="filter" data-category="acompanamiento">Acompañamientos</button>
+        <button class="filter" data-category="bebida">Bebidas</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promo">
+      <div class="promo-inner">
+        <span class="eyebrow">TU ANTOJO TIENE SOLUCIÓN</span>
+        <h2>¿Ya se te hizo agua la boca?</h2>
+        <p>Arma tu pedido y mándanoslo por WhatsApp en unos cuantos pasos.</p>
+        <a class="btn btn-primary" href="#productos">Elegir mi churrasco</a>
+      </div>
+    </section>
+
+    <section class="section location-section" id="direccion">
+      <div class="location-copy">
+        <span class="eyebrow">VEN A VISITARNOS</span>
+        <h2>Te esperamos<br><em>en PIO.</em></h2>
+        <p>Queremos recibirte con buena comida y una atención excelente. Actualiza esta sección con la dirección exacta de tu churrasquería.</p>
+        <div class="contact-line"><span>📍</span><div><strong>Dirección</strong><p id="addressText">Añade aquí tu dirección</p></div></div>
+        <div class="contact-line"><span>🕒</span><div><strong>Horario</strong><p id="hoursText">Añade aquí tu horario de atención</p></div></div>
+        <a class="btn btn-dark" id="mapsLink" href="https://maps.google.com" target="_blank" rel="noopener">Cómo llegar ↗</a>
+      </div>
+      <div class="location-visual">
+        <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1000&q=85" alt="Carne asada sobre una parrilla" loading="lazy">
+        <div class="location-stamp">CHURRASCO<br><strong>CON SABOR</strong></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="section contact-inner">
+        <div>
+          <span class="eyebrow">ESTAMOS PARA ATENDERTE</span>
+          <h2>Hablemos por <em>WhatsApp.</em></h2>
+          <p>¿Tienes una consulta o quieres hacer un pedido? Escríbenos y te atenderemos.</p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <label for="contactName">Tu nombre</label>
+          <input id="contactName" name="name" type="text" placeholder="Escribe tu nombre" required>
+          <label for="contactMessage">¿En qué podemos ayudarte?</label>
+          <textarea id="contactMessage" name="message" rows="3" placeholder="Escribe tu consulta..." required></textarea>
+          <button class="btn btn-primary" type="submit">Enviar consulta por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#inicio">
+      <span class="brand-mark">PIO</span>
+      <span class="brand-copy"><strong>CHURRASQUERÍA</strong><small>SABOR A LA PARRILLA</small></span>
+    </a>
+    <p>© <span id="year"></span> Churrasquería PIO. Hecho para disfrutar.</p>
+    <a href="#inicio" class="back-top">Volver arriba ↑</a>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-header">
+      <div><span class="eyebrow">TU SELECCIÓN</span><h2>Mi pedido</h2></div>
+      <button id="closeCart" class="close-cart" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart-tools">
+      <span class="cart-hint">Revisa tus platos antes de pedir</span>
+      <button id="clearCartBtn" class="clear-cart-btn" type="button">Vaciar carrito</button>
+    </div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Tu carrito está vacío. ¡Elige algo rico!</p></div>
+    <div class="cart-bottom">
+      <label for="orderNotes">Notas del pedido (opcional)</label>
+      <textarea id="orderNotes" rows="2" placeholder="Ej.: sin picante, recogeré en el local..."></textarea>
+      <div class="cart-total"><span>Total estimado</span><strong id="cartTotal">Bs 0</strong></div>
+      <p class="small-note">El total final y la disponibilidad se confirman con el local.</p>
+      <button class="btn btn-primary checkout-btn" id="checkoutBtn">Enviar pedido por WhatsApp ↗</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
